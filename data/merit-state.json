@@ -1,0 +1,35 @@
+{
+  "totalIncense": 108,
+  "totalMerit": 1080,
+  "woodenFishHits": 360,
+  "bellRings": 36,
+  "lanternCount": 18,
+  "fortuneCount": 12,
+  "activeIncenseSticks": 9,
+  "haloIntensity": 0.45,
+  "offerings": {
+    "lotus": 3,
+    "fruit": 2,
+    "lamp": 2,
+    "dragon": 1
+  },
+  "devotees": {},
+  "recentEvents": [],
+  "settings": {
+    "ttsEnabled": true,
+    "ttsVoice": "maichi",
+    "bgMusicEnabled": true,
+    "sfxEnabled": true,
+    "smokeDensity": 1.0,
+    "autoSim": false,
+    "autoSimIntervalMs": 9500
+  },
+  "tiktok": {
+    "connected": false,
+    "connecting": false,
+    "username": "thanhtrungnguyendanh",
+    "roomId": null,
+    "viewerCount": 0,
+    "lastError": null
+  }
+}

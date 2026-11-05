@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Image Load</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+    }
+    img {
+      max-width: 100%;
+      border: 2px solid #fff;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test Loading Images</h1>
+
+  <h2>1. Background Image (amitabha_stage.png)</h2>
+  <img src="/assets/amitabha_stage.png" alt="Background" id="img1">
+  <p id="status1">Loading...</p>
+
+  <h2>2. Buddha Image (buddha.png)</h2>
+  <img src="/assets/buddha.png" alt="Buddha" id="img2">
+  <p id="status2">Loading...</p>
+
+  <h2>3. Temple Background (temple_stage_bg.png)</h2>
+  <img src="/assets/temple_stage_bg.png" alt="Temple BG" id="img3">
+  <p id="status3">Loading...</p>
+
+  <script>
+    function testImage(id, imgId) {
+      const img = document.getElementById(imgId);
+      const status = document.getElementById(id);
+
+      img.onload = function() {
+        status.innerHTML = '✅ LOADED - Size: ' + img.naturalWidth + 'x' + img.naturalHeight;
+        status.style.color = '#4CAF50';
+      };
+
+      img.onerror = function() {
+        status.innerHTML = '❌ FAILED TO LOAD';
+        status.style.color = '#f44336';
+      };
+    }
+
+    testImage('status1', 'img1');
+    testImage('status2', 'img2');
+    testImage('status3', 'img3');
+  </script>
+</body>
+</html>

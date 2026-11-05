@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page - Chùa Online TikTok Live</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #8B4513;
+        }
+        .test-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #8B4513;
+        }
+        .status {
+            font-weight: bold;
+            color: #28a745;
+        }
+        .error {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Page - Chùa Online TikTok Live</h1>
+    <div id="test-results"></div>
+    <script>
+        const results = document.getElementById('test-results');
+        
+        function addTest(name, status, message) {
+            const div = document.createElement('div');
+            div.className = 'test-item';
+            div.innerHTML = `<strong>${name}:</strong> <span class="${status === 'OK' ? 'status' : 'error'}">${status}</span> - ${message}`;
+            results.appendChild(div);
+        }
+        
+        // Test API endpoints
+        fetch('/api/state')
+            .then(res => res.json())
+            .then(data => addTest('API State', 'OK', JSON.stringify(data, null, 2)))
+            .catch(err => addTest('API State', 'FAIL', err.message));
+    </script>
+</body>
+</html>
