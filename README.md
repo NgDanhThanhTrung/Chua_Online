@@ -151,8 +151,7 @@ MIT License - Xem file LICENSE chi tiết
 
 ## 📞 Liên Hệ
 
-- GitHub: [Link repo của bạn]
-- Email: [Email của bạn]
+- GitHub: https://github.com/NgDanhThanhTrung/Chua_Online
 
 ---
 
